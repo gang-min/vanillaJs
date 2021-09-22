@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+}
+
+.cards-container {
+  width: 500px;
+  height: 300px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cards {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cards.animated {
+  transition: left 0.3s ease-in;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.5s ease-in;
+}
+
+.card.flip {
+  transform: rotateX(180deg);
+}
+
+.inner-card__front,
+.inner-card__back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in;
+}
+
+.inner-card__front {
+  opacity: 1;
+}
+
+.inner-card__back {
+  transform: translate(-50%, -50%) rotateX(180deg);
+  opacity: 0;
+}
+
+.inner-card__front.show-answer {
+  opacity: 0;
+}
+
+.inner-card__back.show-answer {
+  opacity: 1;
+}
+
+/* -------------------- */
+.addBtn {
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.nav button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.nav__current {
+  padding: 0 40px;
+}
+
+.clear__btn {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  padding: 10px 15px;
+  background-color: #fff;
+  outline: none;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+.clear__btn:hover {
+  background-color: royalblue;
+}
+
+.add-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #eee;
+  visibility: hidden;
+}
+
+.add-container.show {
+  visibility: visible;
+}
+
+.add-container h1 > button {
+  margin-left: 15px;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.add-card {
+  background-color: #fff;
+  font-size: 14px;
+  outline: none;
+  border: 1px solid gray;
+  padding: 10px 15px;
+  cursor: pointer;
+}

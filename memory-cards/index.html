@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Cards</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <h1 class=>
+      Memory Cards
+      <button class="addBtn">+ Add New card</button>
+    </h1>
+
+    <div class="cards-container">
+      <div class="cards">
+        <div class="card">
+            <div class="inner-card__front">apple</div>
+            <div class="inner-card__back">사과</div>
+        </div>
+        <div class="card">
+            <div class="inner-card__front">banana</div>
+            <div class="inner-card__back">바나나</div>
+        </div>
+        <div class="card">
+            <div class="inner-card__front">orange</div>
+            <div class="inner-card__back">오렌지</div>
+        </div>
+        <div class="card">
+            <div class="inner-card__front">peach</div>
+            <div class="inner-card__back">복숭아</div>
+        </div>
+      </div>  
+    </div>
+
+    <div class="nav">
+      <button class="nav__prev">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <p class="nav__current"></p>
+      <button class="nav__next">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <button class="clear__btn"><i class="fas fa-trash"></i> Clear Cards</button>
+
+    <div class="add-container">
+      <h1>
+        Add New Card
+        <button class="closeBtn">x</button>
+      </h1>
+
+      <div class="form">
+        <label for="question">Question</label>
+        <textarea name="question" id="question" cols="50" rows="3"></textarea>
+      </div>
+      <div class="form">
+        <label for="answer">Answer</label>
+        <textarea name="answer" id="answer" cols="50" rows="3"></textarea>
+      </div>
+
+      <button class="add-card">+ Add card</button>
+    </div>
+  </body>
+</html>
