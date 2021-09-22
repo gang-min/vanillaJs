@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.simple-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider-container {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slider-container.animated {
+  transition: left 0.3s ease-in;
+}
+
+.slide {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  padding: 0 10%;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 3%;
+}
+
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 3%;
+}
+
+.prev.disabled,
+.next.disabled {
+  display: none;
+}
